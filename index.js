@@ -11,7 +11,7 @@ app.use(express.urlencoded({
 
 const PORT = 10082;
 
-const URL_BASE = `http://localhost:${PORT}`
+const URL_BASE = `https://localhost:${PORT}`
 
 app.post('/updatacheck.do', (req, res) => {
     console.log('POST /updatacheck.do')
