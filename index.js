@@ -40,6 +40,7 @@ app.post('/boardauth.do', (req, res) => {
     let serverTime = moment().format('YYYYMMDDHHmm');
     let utcServerTime = moment().utc().format('YYYYMMDDHHmm');
     console.log('POST /boardauth.do');
+    console.log(`${req.body.placeId}`);
 
     let response = {
         RESULTS: "001",
@@ -47,9 +48,9 @@ app.post('/boardauth.do', (req, res) => {
         AREA_0_EN: "",
         AREA_1: "009",
         AREA_1_EN: "",
-        AREA_2: "",
+        AREA_2: "010",
         AREA_2_EN: "",
-        AREA_3: "",
+        AREA_3: "011",
         AREA_3_EN: "",
         AREA_FULL_0: "",
         AREA_FULL_0_EN: "",
@@ -61,7 +62,7 @@ app.post('/boardauth.do', (req, res) => {
         AREA_FULL_3_EN: "",
         AUTH_INTERVAL: "86400",
         CHARGE_URL: `${URL_BASE}/charge/`,
-        CONSUME_TOKEN: "1",
+        CONSUME_TOKEN: "0",
         COUNTRY_CD: "JPN",
         DONGLE_FLG: "1",
         EXPIRATION_DATE: "null",
@@ -71,14 +72,14 @@ app.post('/boardauth.do', (req, res) => {
         PREFECTURE_ID: "14",
         SERVER_TIME: serverTime,
         UTC_SERVER_TIME: utcServerTime,
-        SHOP_NAME: "muchatest",
-        SHOP_NAME_EN: "muchatest",
-        SHOP_NICKNAME: "MT",
-        SHOP_NICKNAME_EN: "MT",
+        SHOP_NAME: "WMMT6",
+        SHOP_NAME_EN: "WMMT6",
+        SHOP_NICKNAME: "W",
+        SHOP_NICKNAME_EN: "W",
         URL_1: `${URL_BASE}/url1/`,
         URL_2: `${URL_BASE}/url2/`,
         URL_3: `${URL_BASE}/url3/`,
-        USE_TOKEN: "1"
+        USE_TOKEN: "0"
     }
 
     let urlResponse = formUrlEncoded(response);
